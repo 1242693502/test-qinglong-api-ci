@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="orderFlow">
+            <file>./tests/Unit/Services/Order/OrderTest.php</file>
+            <file>./tests/Unit/Services/Truck/TruckTest.php</file>
+            <file>./tests/Unit/Services/Truck/TrailerTest.php</file>
+            <file>./tests/Unit/Services/Driver/DriverTest.php</file>
+            <file>./tests/Unit/Services/Driver/AppointDriversTest.php</file>
+            <file>./tests/Unit/Services/Truck/AppointTruckTest.php</file>
+            <file>./tests/Unit/Services/Driver/DriverConfirmTest.php</file>
+            <file>./tests/Unit/Services/Driver/SwapDrivingTest.php</file>
+            <file>./tests/Unit/Services/Order/MainLine/CheckTruckCertificatesTest.php</file>
+            <file>./tests/Unit/Services/Truck/TruckApprovalTest.php</file>
+            <file>./tests/Unit/Services/Order/MainLine/CheckTruckTest.php</file>
+            <!--<file>./tests/Unit/Services/Order/MainLine/TrafficJamTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/HighWayEnterTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/HighWayLeaveTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/ArriveLoadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CheckTrailerCertificatesTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/TruckApprovalOneTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CheckTrailerTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/ReceiveReceiptTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CountLoadingBeginTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CountLoadingEndTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/RecordSealsTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/RecordWeightTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/AddLoadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/ArriveSecondLoadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/NoCountLoadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CompleteLoadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/ArriveUnloadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/SendReceiptTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CountUnloadingBeginTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CountUnloadingEndTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/UnloadingAbnormalTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/AddUnloadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/ArriveSecondUnloadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/NoCountUnloadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CompleteUnloadingTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Order/MainLine/CompleteTest.php</file>-->
+        </testsuite>
+
+        <!--<testsuite name="gasCard">-->
+            <!--<file>./tests/Unit/Services/GasCard/FillingStationTest.php</file>-->
+        <!--</testsuite>-->
+
+        <!--<testsuite name="notification">-->
+            <!--<file>./tests/Unit/Services/Notification/NotificationTest.php</file>-->
+        <!--</testsuite>-->
+
+        <!--<testsuite name="truckLog">-->
+            <!--<file>./tests/Unit/Services/Truck/Log/AdBlueLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/OtherLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/ParkLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/PenaltyLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/RefuelLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/RepairLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/WeigthLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/CoolantLogTest.php</file>-->
+            <!--<file>./tests/Unit/Services/Truck/Log/TollRoadLogTest.php</file>-->
+        <!--</testsuite>-->
+
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app/Console</directory>
+            <directory suffix=".php">./app/Models</directory>
+            <directory suffix=".php">./app/Providers</directory>
+            <directory suffix=".php">./app/Services</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="/apps/working/test"/>
+    </logging>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="MAIL_DRIVER" value="array"/>
+        <env name="DB_HOST" value="192.168.99.20"/>
+        <env name="DB_PORT" value="3306"/>
+        <env name="DB_DATABASE" value="skc_qinglong_api_db"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="DB_PASSWORD" value="root@2017"/>
+    </php>
+</phpunit>
